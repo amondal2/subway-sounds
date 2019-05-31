@@ -1,8 +1,9 @@
 import React from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import AudioTile from './AudioTile/AudioTile';
 
 const WorldMap = () => {
-  const position = [42.3601, -71.0589];
+  const position = [40.7128, -74.006];
   return (
     <Map center={position} zoom={4}>
       <TileLayer
@@ -11,9 +12,7 @@ const WorldMap = () => {
       />
       <Marker position={position}>
         <Popup>
-          A pretty CSS3 popup.
-          <br />
-          Easily customizable.
+          <AudioTile />
         </Popup>
       </Marker>
     </Map>
